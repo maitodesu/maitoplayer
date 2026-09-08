@@ -1,0 +1,61 @@
+[workspace]
+resolver = "3"
+members = [
+  "crates/anki-connect",
+  "crates/app-core",
+  "crates/contracts",
+  "crates/dictionary",
+  "crates/japanese-nlp",
+  "crates/media-engine",
+  "crates/mining-assets",
+  "crates/ports",
+  "crates/storage",
+  "crates/subtitle-core",
+  "crates/test-support",
+  "tools/dictionary-builder",
+]
+exclude = ["apps/desktop/src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+license = "MIT OR Apache-2.0"
+repository = "https://example.invalid/migaku-video-companion"
+
+[workspace.dependencies]
+contracts = { path = "crates/contracts" }
+ports = { path = "crates/ports" }
+app-core = { path = "crates/app-core" }
+media-engine = { path = "crates/media-engine" }
+subtitle-core = { path = "crates/subtitle-core" }
+japanese-nlp = { path = "crates/japanese-nlp" }
+dictionary = { path = "crates/dictionary" }
+mining-assets = { path = "crates/mining-assets" }
+anki-connect = { path = "crates/anki-connect" }
+storage = { path = "crates/storage" }
+test-support = { path = "crates/test-support" }
+
+base64 = "0.22.1"
+csv = "1.4.0"
+hex = "0.4.3"
+lindera = { version = "=6.0.0", features = ["embed-ipadic"] }
+parking_lot = "0.12.5"
+quick-xml = "0.42.0"
+regex = "1.13.1"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sha2 = "0.11.0"
+tempfile = "3.27.0"
+thiserror = "2.0.20"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"

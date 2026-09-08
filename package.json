@@ -1,0 +1,18 @@
+{
+  "name": "migaku-video-companion",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24.14.0",
+    "pnpm": ">=11.24.0"
+  },
+  "scripts": {
+    "generate:contracts": "node tools/contracts/generate-typescript.mjs && pnpm --dir apps/desktop/ui exec prettier --write src/lib/contracts/generated.ts",
+    "dev": "pnpm --dir apps/desktop/ui dev",
+    "build": "pnpm --dir apps/desktop/ui build",
+    "check": "pnpm --dir apps/desktop/ui check",
+    "test": "pnpm --dir apps/desktop/ui test",
+    "format:check": "pnpm --dir apps/desktop/ui format:check"
+  }
+}

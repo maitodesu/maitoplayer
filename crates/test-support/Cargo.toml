@@ -1,0 +1,17 @@
+[package]
+name = "test-support"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+anki-connect.workspace = true
+contracts.workspace = true
+ports.workspace = true
+parking_lot.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true
+

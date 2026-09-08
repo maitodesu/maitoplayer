@@ -1,0 +1,14 @@
+Noto Sans JP
+============
+
+This application bundles the Japanese subset variable TTF from Noto Sans CJK
+version 2.004 for consistent offline subtitle rendering.
+
+Upstream project: https://github.com/notofonts/noto-cjk
+Source tag: Sans2.004
+Source commit: 523d033d6cb47f4a80c58a35753646f5c3608a78
+Source file: Sans/Variable/TTF/Subset/NotoSansJP-VF.ttf
+SHA-256: F4B373B226668EE33A6E54B02823DCD2D1209F17159F777421AE8C2275160369
+
+The font is distributed under the SIL Open Font License 1.1. The complete
+license is bundled beside this notice as NotoSansJP-OFL.txt.

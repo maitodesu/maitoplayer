@@ -1,0 +1,18 @@
+[package]
+name = "app-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+contracts.workspace = true
+ports.workspace = true
+subtitle-core.workspace = true
+hex.workspace = true
+parking_lot.workspace = true
+sha2.workspace = true
+serde.workspace = true
+
+[lints]
+workspace = true

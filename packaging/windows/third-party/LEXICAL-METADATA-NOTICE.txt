@@ -1,0 +1,48 @@
+Japanese learning metadata
+==========================
+
+Pitch-accent data
+-----------------
+
+The bundled lexical-metadata.sqlite database contains a compact transformation
+of pitch-accent fields from UniDic for Contemporary Spoken Japanese 3.1.1,
+published by the National Institute for Japanese Language and Linguistics.
+Migaku uses the New BSD licence option offered by the UniDic project. The
+original AUTHORS and BSD files are installed beside this notice.
+
+Source:
+https://clrd.ninjal.ac.jp/unidic_archive/csj/3.1.1/unidic-csj-3.1.1/lex_3_1.csv
+SHA-256:
+642BCEBC4928856ED9C08D72CFE3E17187978B5EBEC13944EAE80C974E922301
+
+Displayed contours describe Tokyo lexical pitch for a dictionary form. Actual
+speech may differ because of conjugation, compounds, accent sandhi, focus,
+dialect, or acting. The contours are not measurements of the video's audio.
+
+JLPT estimates
+--------------
+
+The bundled JLPT N1-N5 labels are derived from
+stephenmk/yomitan-jlpt-vocab 2025.08.01.0, which maps Jonathan Waller's JLPT
+vocabulary lists to normalized terms and readings. The dataset is distributed
+under Creative Commons Attribution-ShareAlike 4.0; its licence is installed
+beside this notice.
+
+Source:
+https://github.com/stephenmk/yomitan-jlpt-vocab/tree/2025.08.01.0
+Archive SHA-256:
+B475E2605FBF6D5372BD1D16153981F3924A1237715D33DD44F3312F70A61CE5
+
+The JLPT organization has not published official vocabulary lists for the
+current N1-N5 test since the 2010 revision. Every label is therefore shown as an
+unofficial community estimate and is not endorsed by the Japan Foundation or
+Japan Educational Exchanges and Services.
+
+Transformation
+--------------
+
+Only normalized spelling, reading, pitch type, and estimated JLPT level are
+retained. The deterministic database build, exact source hashes, row counts,
+and attribution files are pinned in runtime-dependencies.lock.json. No claim is
+made that NINJAL, the UniDic Consortium, Teruaki Oka, Stephen Kraus, Jonathan
+Waller, the Japan Foundation, or JEES endorses this application.

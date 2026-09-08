@@ -1,0 +1,19 @@
+{
+  "kind": "direct",
+  "state": "ready",
+  "source_stream_ids": ["stream-video-0", "stream-audio-1"],
+  "output_container": "mp4",
+  "output_codecs": ["h264", "aac"],
+  "timeline_map": {
+    "source_origin_us": 0,
+    "playback_origin_us": 0,
+    "source_offset_us": 0,
+    "source_duration_us": 10000000,
+    "playback_duration_us": 10000000
+  },
+  "estimated_cost": "negligible",
+  "cache_key": null,
+  "progress": 1.0,
+  "reason_codes": ["WEBVIEW_CAPABILITY_CONFIRMED"]
+}
+

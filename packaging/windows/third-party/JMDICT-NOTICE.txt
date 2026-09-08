@@ -1,0 +1,24 @@
+JMdict English dictionary data
+==============================
+
+The bundled jmdict.sqlite database is an English-only transformation of JMdict,
+the Japanese-Multilingual Dictionary File maintained by the Electronic Dictionary
+Research and Development Group (EDRDG). The source JSON was produced by the
+jmdict-simplified project and was transformed into Migaku dictionary schema 3;
+word forms, readings, English glosses, usage labels, restrictions, and source
+attribution are retained. No claim is made that EDRDG or jmdict-simplified
+endorses this application.
+
+Data source: JMdict / EDRDG (https://www.edrdg.org/jmdict/j_jmdict.html)
+Transformer: scriptin/jmdict-simplified
+Source release: 3.6.2+20260831182826
+Source repository commit:
+https://github.com/scriptin/jmdict-simplified/tree/bbe7774b2cb50b3149ece490f6c330d30da2d4ab
+Pinned English source archive:
+https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20260831182826/jmdict-eng-3.6.2%2B20260831182826.json.zip
+
+The data and derived SQLite database are distributed under Creative Commons
+Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). The complete licence and
+attribution text from jmdict-simplified is installed beside this notice as
+JMdict-LICENSE.txt. Modified material is identified above as the schema-3 SQLite
+transformation. The database contains 218,672 entries.

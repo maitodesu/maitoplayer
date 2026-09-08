@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "ffmpeg": {
+    "version": "n8.1.2-34-g9b6c8969e0-20260731",
+    "releaseTag": "autobuild-2026-07-31-14-10",
+    "archive": {
+      "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-07-31-14-10/ffmpeg-n8.1.2-34-g9b6c8969e0-win64-lgpl-8.1.zip",
+      "fileName": "ffmpeg-n8.1.2-34-g9b6c8969e0-win64-lgpl-8.1.zip",
+      "size": 145349121,
+      "sha256": "089E4169E93B2B3F3ACBFCED3C0704D24276A225641BDDA04D796D28B07A2A38"
+    },
+    "archiveRoot": "ffmpeg-n8.1.2-34-g9b6c8969e0-win64-lgpl-8.1",
+    "sourceCommit": {
+      "sha": "9b6c8969e05b4f0b29f0f85cd501be6b3e582e6b",
+      "url": "https://github.com/FFmpeg/FFmpeg/tree/9b6c8969e05b4f0b29f0f85cd501be6b3e582e6b"
+    },
+    "buildScriptsCommit": {
+      "sha": "a99e8230eae00d1cee38f23076a7a1f55cd984e2",
+      "url": "https://github.com/BtbN/FFmpeg-Builds/tree/a99e8230eae00d1cee38f23076a7a1f55cd984e2"
+    },
+    "license": {
+      "sourcePath": "LICENSE.txt",
+      "sha256": "DA7EABB7BAFDF7D3AE5E9F223AA5BDC1EECE45AC569DC21B3B037520B4464768"
+    },
+    "tools": {
+      "ffmpeg": {
+        "sourcePath": "bin/ffmpeg.exe",
+        "size": 113536512,
+        "sha256": "6099366F31293CDC6C283EA44FFB32F07E3139CD0CAF6D0DB652A7D064D089CB"
+      },
+      "ffprobe": {
+        "sourcePath": "bin/ffprobe.exe",
+        "size": 113330688,
+        "sha256": "4C2F730969C9551AEC21C5CA07EB73F63BB0920204C9CD6C9A6E7BE6BE0458D2"
+      }
+    },
+    "requiredConfiguration": [
+      "--enable-version3",
+      "--disable-libx264",
+      "--disable-libx265",
+      "--disable-libxvid"
+    ],
+    "forbiddenConfiguration": [
+      "--enable-gpl",
+      "--enable-nonfree",
+      "--enable-libx264",
+      "--enable-libx265",
+      "--enable-libxvid"
+    ],
+    "requiredEncoders": ["libopenh264", "aac"]
+  },
+  "jmdict": {
+    "version": "3.6.2+20260831182826",
+    "releaseTag": "3.6.2+20260831182826",
+    "archive": {
+      "url": "https://github.com/scriptin/jmdict-simplified/releases/download/3.6.2%2B20260831182826/jmdict-eng-3.6.2%2B20260831182826.json.zip",
+      "fileName": "jmdict-eng-3.6.2+20260831182826.json.zip",
+      "size": 11510405,
+      "sha256": "56DDA95D763274786281080E6374FC14EB9E7CB5522E6086ECA7A17A042A38D0"
+    },
+    "archiveSourcePath": "jmdict-eng-3.6.2.json",
+    "source": {
+      "size": 117838793,
+      "sha256": "51C9E087EF33F490FBF070633FB22AE6AE3C12DA74BFBEFEE460DD954B59599A"
+    },
+    "sourceRepositoryCommit": {
+      "sha": "bbe7774b2cb50b3149ece490f6c330d30da2d4ab",
+      "url": "https://github.com/scriptin/jmdict-simplified/tree/bbe7774b2cb50b3149ece490f6c330d30da2d4ab"
+    },
+    "license": {
+      "url": "https://raw.githubusercontent.com/scriptin/jmdict-simplified/3.6.2%2B20260831182826/LICENSE.txt",
+      "fileName": "jmdict-simplified-3.6.2+20260831182826-LICENSE.txt",
+      "sha256": "7ABE19EC9BB73B36141B999B861D24AD855E808BAFE0F81E84CCE28556F6C297"
+    },
+    "database": {
+      "schemaVersion": "3",
+      "entryCount": 218672,
+      "size": 88133632,
+      "sha256": "1DA956247271AA24B9742CEB55CD5A75AEF5F7E304466B56775B755DB79E511D"
+    }
+  },
+  "lexicalMetadata": {
+    "schemaVersion": "1",
+    "pitch": {
+      "version": "UniDic CSJ 3.1.1",
+      "source": {
+        "url": "https://clrd.ninjal.ac.jp/unidic_archive/csj/3.1.1/unidic-csj-3.1.1/lex_3_1.csv",
+        "fileName": "unidic-csj-3.1.1-lex.csv",
+        "size": 233718876,
+        "sha256": "642BCEBC4928856ED9C08D72CFE3E17187978B5EBEC13944EAE80C974E922301"
+      },
+      "sourcePage": "https://clrd.ninjal.ac.jp/unidic/back_number.html",
+      "authors": {
+        "url": "https://clrd.ninjal.ac.jp/unidic_archive/csj/3.1.1/unidic-csj-3.1.1/liceses/AUTHORS",
+        "fileName": "unidic-csj-3.1.1-AUTHORS.txt",
+        "size": 34,
+        "sha256": "D3CDE34EB1EC1F6B4B4D78B77D2FF909F812A3C71D451CF97ADB48CE7B1B0AB5"
+      },
+      "license": {
+        "url": "https://clrd.ninjal.ac.jp/unidic_archive/csj/3.1.1/unidic-csj-3.1.1/liceses/BSD",
+        "fileName": "unidic-csj-3.1.1-BSD.txt",
+        "size": 1547,
+        "sha256": "19ED65BC4230F2C786D955247DA91D21F609149ACCD49715971D14319F97AF8D"
+      }
+    },
+    "jlpt": {
+      "version": "JLPT estimate 2025.08.01.0",
+      "releaseTag": "2025.08.01.0",
+      "archive": {
+        "url": "https://github.com/stephenmk/yomitan-jlpt-vocab/releases/download/2025.08.01.0/jlpt.zip",
+        "fileName": "yomitan-jlpt-vocab-2025.08.01.0.zip",
+        "size": 79029,
+        "sha256": "B475E2605FBF6D5372BD1D16153981F3924A1237715D33DD44F3312F70A61CE5"
+      },
+      "sourceRepository": "https://github.com/stephenmk/yomitan-jlpt-vocab/tree/2025.08.01.0",
+      "license": {
+        "url": "https://raw.githubusercontent.com/stephenmk/yomitan-jlpt-vocab/2025.08.01.0/LICENSE.txt",
+        "fileName": "yomitan-jlpt-vocab-2025.08.01.0-LICENSE.txt",
+        "size": 20131,
+        "sha256": "7ABE19EC9BB73B36141B999B861D24AD855E808BAFE0F81E84CCE28556F6C297"
+      }
+    },
+    "database": {
+      "fileName": "lexical-metadata-unidic-csj-3.1.1-jlpt-2025.08.01.0.sqlite",
+      "pitchPatternCount": 893228,
+      "jlptEstimateCount": 8113,
+      "size": 95924224,
+      "sha256": "FF7B25A687040B09BB63DB106B8FABF6E4E3A99A39837A9F01F01ACAFD2276D2"
+    }
+  },
+  "notoSansJp": {
+    "version": "2.004",
+    "sourceCommit": {
+      "sha": "523d033d6cb47f4a80c58a35753646f5c3608a78",
+      "url": "https://github.com/notofonts/noto-cjk/tree/523d033d6cb47f4a80c58a35753646f5c3608a78"
+    },
+    "font": {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/523d033d6cb47f4a80c58a35753646f5c3608a78/Sans/Variable/TTF/Subset/NotoSansJP-VF.ttf",
+      "path": "apps/desktop/ui/static/fonts/NotoSansJP-VF.ttf",
+      "size": 9590732,
+      "sha256": "F4B373B226668EE33A6E54B02823DCD2D1209F17159F777421AE8C2275160369"
+    },
+    "license": {
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/523d033d6cb47f4a80c58a35753646f5c3608a78/LICENSE",
+      "path": "apps/desktop/ui/static/fonts/NotoSansJP-OFL.txt",
+      "size": 4301,
+      "sha256": "6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2"
+    },
+    "noticePath": "apps/desktop/ui/static/fonts/NotoSansJP-NOTICE.txt"
+  }
+}

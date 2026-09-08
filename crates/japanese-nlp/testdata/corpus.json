@@ -1,0 +1,10 @@
+{
+  "tokenizer": "lindera-6.0.0-ipadic",
+  "cases": [
+    {"text": "昨日は映画を見ました。", "required_lemmas": ["昨日", "映画", "見る"]},
+    {"text": "食べられなかった", "required_lemmas": ["食べる"]},
+    {"text": "きれいな空", "required_lemmas": ["きれい", "空"]},
+    {"text": "GPUを2個使う", "required_surfaces": ["GPU", "2", "個", "使う"]}
+  ]
+}
+

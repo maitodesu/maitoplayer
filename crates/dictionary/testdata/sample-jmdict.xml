@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JMdict>
+  <entry>
+    <ent_seq>1000010</ent_seq>
+    <k_ele><keb>見る</keb><ke_pri>ichi1</ke_pri></k_ele>
+    <k_ele><keb>観る</keb></k_ele>
+    <r_ele><reb>みる</reb><re_restr>見る</re_restr></r_ele>
+    <sense>
+      <pos>verb</pos>
+      <field>cinematography</field>
+      <dial>Tokyo-ben</dial>
+      <misc>common usage</misc>
+      <stagk>見る</stagk>
+      <gloss>to see</gloss>
+      <gloss>to watch</gloss>
+      <gloss xml:lang="dut">zien</gloss>
+    </sense>
+  </entry>
+  <entry>
+    <ent_seq>1000020</ent_seq>
+    <k_ele><keb>日本語</keb></k_ele>
+    <r_ele><reb>にほんご</reb></r_ele>
+    <sense><pos>noun</pos><gloss>Japanese language</gloss></sense>
+  </entry>
+</JMdict>

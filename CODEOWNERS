@@ -1,0 +1,11 @@
+* @maintainers
+/Cargo.toml @maintainers
+/Cargo.lock @maintainers
+/package.json @maintainers
+/pnpm-lock.yaml @maintainers
+/crates/contracts/ @maintainers
+/crates/ports/ @maintainers
+/crates/app-core/ @maintainers
+/apps/desktop/src-tauri/ @maintainers
+/apps/desktop/ui/src/App.svelte @maintainers
+

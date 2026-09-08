@@ -1,0 +1,24 @@
+[package]
+name = "dictionary-builder"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+contracts.workspace = true
+csv.workspace = true
+dictionary.workspace = true
+hex.workspace = true
+quick-xml.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+ports.workspace = true
+tempfile.workspace = true
+
+[lints]
+workspace = true

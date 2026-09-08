@@ -1,0 +1,7 @@
+{
+  "code": "ANKI_OFFLINE",
+  "message": "Start Anki Desktop, confirm AnkiConnect is installed, then retry.",
+  "retryable": true,
+  "diagnostics": null
+}
+

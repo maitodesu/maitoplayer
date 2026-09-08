@@ -1,0 +1,43 @@
+[package]
+name = "migaku-video-companion"
+version = "0.1.0"
+description = "Local Japanese immersion video companion"
+edition = "2024"
+rust-version = "1.96"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "migaku_video_companion_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+anki-connect = { path = "../../../crates/anki-connect" }
+app-core = { path = "../../../crates/app-core" }
+contracts = { path = "../../../crates/contracts" }
+dictionary = { path = "../../../crates/dictionary" }
+hex = "0.4.3"
+japanese-nlp = { path = "../../../crates/japanese-nlp" }
+media-engine = { path = "../../../crates/media-engine" }
+mining-assets = { path = "../../../crates/mining-assets" }
+parking_lot = "0.12.5"
+ports = { path = "../../../crates/ports" }
+storage = { path = "../../../crates/storage" }
+subtitle-core = { path = "../../../crates/subtitle-core" }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sha2 = "0.11.0"
+tauri = { version = "2.11.5", features = [] }
+tauri-plugin-dialog = "2.7.3"
+
+[dev-dependencies]
+tempfile = "3.27.0"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"

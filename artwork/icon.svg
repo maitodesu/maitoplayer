@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Migaku Video Companion mark">
+  <rect width="512" height="512" rx="112" fill="#0b0d12"/>
+  <rect x="62" y="62" width="388" height="388" rx="84" fill="#60d7a3"/>
+  <path d="M132 148h248v48H132zm22 74h204v132H154zm48 42v48h108v-48z" fill="#0b0d12" fill-rule="evenodd"/>
+  <path d="M112 382h288v38H112z" fill="#0b0d12"/>
+  <circle cx="256" cy="288" r="18" fill="#e3b66d"/>
+</svg>

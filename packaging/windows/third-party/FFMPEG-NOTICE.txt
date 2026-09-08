@@ -1,0 +1,27 @@
+FFmpeg bundled command-line programs
+====================================
+
+Migaku Video Companion invokes the separately bundled ffmpeg.exe and ffprobe.exe
+programs. It does not link FFmpeg libraries into the application.
+
+Upstream project: FFmpeg (https://ffmpeg.org/)
+Binary distributor: BtbN/FFmpeg-Builds
+Binary release: autobuild-2026-07-31-14-10
+FFmpeg version: n8.1.2-34-g9b6c8969e0-20260731
+FFmpeg source commit:
+https://github.com/FFmpeg/FFmpeg/tree/9b6c8969e05b4f0b29f0f85cd501be6b3e582e6b
+Build scripts commit:
+https://github.com/BtbN/FFmpeg-Builds/tree/a99e8230eae00d1cee38f23076a7a1f55cd984e2
+Binary archive:
+https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-07-31-14-10/ffmpeg-n8.1.2-34-g9b6c8969e0-win64-lgpl-8.1.zip
+
+This selected build reports LGPL version 3, --enable-version3, and no
+--enable-gpl or --enable-nonfree option. GPL codecs including libx264, libx265,
+and libxvid are disabled. The exact archive, executables, configuration, encoders,
+and licence are verified by packaging/windows/stage-runtime-dependencies.ps1.
+
+The complete LGPL version 3 text supplied by the binary distributor is installed
+beside this notice as FFmpeg-LICENSE.txt. The pinned corresponding FFmpeg source
+and reproducible build scripts are available at the links above. A release owner
+must keep those exact sources/build scripts available with the distributed build
+and complete the project's distribution/legal review before public release.

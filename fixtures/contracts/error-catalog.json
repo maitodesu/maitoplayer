@@ -1,0 +1,19 @@
+{
+  "MEDIA_SCOPE_DENIED": "Locate the media or subtitle file again.",
+  "MEDIA_PROBE_FAILED": "Check FFprobe health or choose another local media file.",
+  "MEDIA_UNSUPPORTED": "Review codec details and the conversion support matrix.",
+  "PLAYBACK_DECODE_FAILED": "Try the next deterministic playback plan.",
+  "CONVERSION_REQUIRED": "Review time and disk cost, then explicitly approve video conversion.",
+  "CONVERSION_FAILED": "Check FFmpeg health, free space, and retry.",
+  "CONVERSION_CANCELLED": "Restart the compatibility conversion when ready.",
+  "SUBTITLE_AMBIGUOUS": "Choose one of the tied subtitle sources.",
+  "SUBTITLE_IMAGE_UNSUPPORTED": "Choose an SRT, ASS/SSA, WebVTT, or embedded text track.",
+  "DICTIONARY_UNAVAILABLE": "Import the checksummed local JMdict database.",
+  "FFMPEG_NOT_FOUND": "Install FFmpeg or choose the executable in Settings.",
+  "ANKI_OFFLINE": "Start Anki Desktop and verify AnkiConnect.",
+  "ANKI_SCHEMA_MISMATCH": "Remap deck, note type, and fields.",
+  "PUBLISH_OUTCOME_UNCERTAIN": "Reconcile by the mining marker before retrying.",
+  "INVALID_REQUEST": "Refresh the current media state and retry the action.",
+  "STALE_REVISION": "Review the refreshed subtitle or draft before retrying.",
+  "STORAGE_FAILED": "Check available disk space and application data permissions."
+}
