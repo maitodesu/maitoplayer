@@ -90,7 +90,7 @@ export function subtitleSummary(subtitle: PlaylistSubtitleV1): string {
   return subtitle.reason ? `Missing · ${subtitle.reason}` : 'Missing';
 }
 
-export const PLAYLIST_SCAN_MODE_STORAGE_KEY = 'migaku.playlist-scan-mode.v1';
+export const PLAYLIST_SCAN_MODE_STORAGE_KEY = 'maitoplayer.playlist-scan-mode.v1';
 
 interface StorageReader {
   getItem(key: string): string | null;

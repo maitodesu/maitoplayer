@@ -2101,6 +2101,31 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6"
 
 [[package]]
+name = "maito-player"
+version = "0.1.0"
+dependencies = [
+ "anki-connect",
+ "app-core",
+ "contracts",
+ "dictionary",
+ "hex",
+ "japanese-nlp",
+ "media-engine",
+ "mining-assets",
+ "parking_lot",
+ "ports",
+ "serde",
+ "serde_json",
+ "sha2 0.11.0",
+ "storage",
+ "subtitle-core",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-dialog",
+ "tempfile",
+]
+
+[[package]]
 name = "markup5ever"
 version = "0.38.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2154,31 +2179,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a"
 dependencies = [
  "autocfg",
-]
-
-[[package]]
-name = "migaku-video-companion"
-version = "0.1.0"
-dependencies = [
- "anki-connect",
- "app-core",
- "contracts",
- "dictionary",
- "hex",
- "japanese-nlp",
- "media-engine",
- "mining-assets",
- "parking_lot",
- "ports",
- "serde",
- "serde_json",
- "sha2 0.11.0",
- "storage",
- "subtitle-core",
- "tauri",
- "tauri-build",
- "tauri-plugin-dialog",
- "tempfile",
 ]
 
 [[package]]

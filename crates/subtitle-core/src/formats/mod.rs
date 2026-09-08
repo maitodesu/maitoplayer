@@ -21,7 +21,7 @@ pub(crate) fn make_cue(
     style_hint: SubtitleStyleHintV1,
 ) -> SubtitleCueV1 {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-cue-v1\0");
+    hasher.update(b"maitoplayer-cue-v1\0");
     hasher.update(source_version.as_bytes());
     hasher.update([0]);
     hasher.update(identity.as_bytes());

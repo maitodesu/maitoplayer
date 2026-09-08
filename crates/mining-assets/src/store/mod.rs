@@ -69,7 +69,7 @@ impl AssetStore {
         let extension = validated_extension(source, kind)?;
         validate_signature(source, kind)?;
         let hash = hash_file(source)?;
-        let media_name = format!("migaku-{hash}.{extension}");
+        let media_name = format!("kiku-{hash}.{extension}");
         let final_path = self.root.join(&media_name);
         if final_path.exists() {
             validate_existing(&final_path, &hash, kind)?;
@@ -90,7 +90,7 @@ impl AssetStore {
     pub fn find(&self, hash: &str, kind: AssetKind) -> Result<Option<StoredAsset>, AppErrorV1> {
         validate_hash(hash)?;
         for extension in extensions(kind) {
-            let media_name = format!("migaku-{hash}.{extension}");
+            let media_name = format!("kiku-{hash}.{extension}");
             let path = self.root.join(&media_name);
             if path.exists() {
                 validate_existing(&path, hash, kind)?;
@@ -250,7 +250,7 @@ impl AssetStore {
     fn asset_exists(&self, hash: &str) -> bool {
         ["mp3", "ogg", "jpg", "png"].iter().any(|extension| {
             self.root
-                .join(format!("migaku-{hash}.{extension}"))
+                .join(format!("kiku-{hash}.{extension}"))
                 .symlink_metadata()
                 .is_ok_and(|metadata| metadata.file_type().is_file())
         })
@@ -377,7 +377,7 @@ fn validate_owner(owner: &str) -> Result<(), AppErrorV1> {
 }
 
 fn asset_hash_from_name(name: &str) -> Option<&str> {
-    let remainder = name.strip_prefix("migaku-")?;
+    let remainder = name.strip_prefix("kiku-")?;
     let (hash, extension) = remainder.rsplit_once('.')?;
     if !["mp3", "ogg", "jpg", "png"].contains(&extension) || validate_hash(hash).is_err() {
         return None;

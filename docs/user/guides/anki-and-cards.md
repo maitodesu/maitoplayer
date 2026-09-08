@@ -7,7 +7,7 @@ enable AnkiConnect, and keep its default loopback endpoint available at
 `127.0.0.1:8765`.
 
 The default pre-release profile targets deck `Default` and a note type named
-`Migaku`, with separate Expression, Reading, Sentence, Definition, Audio, Image,
+`Kiku`, with separate Expression, Reading, Sentence, Definition, Audio, Image,
 Source, Timestamp, and MiningId fields. Create that note type manually or enter
 an existing deck, note type, and one-to-one field mapping in Settings. The app
 validates and persists the mapping but does not yet provide deck/model discovery;
@@ -18,7 +18,7 @@ token. The composer receives the same hiragana reading, complete numbered sense
 list, labels, and sentence context shown in the hover card; those editable values
 are also the values sent to Anki for consistency. The backend freezes the media
 session, subtitle version, cue, token, dictionary entry, and canonical source
-time. A stable `migaku_id_…` tag makes remote reconciliation possible.
+time. A stable `kiku_id_…` tag makes remote reconciliation possible.
 
 The source candidate composes audio/image extraction, content-addressed media
 upload, field mapping, and durable retry. After extraction, saved asset hashes let

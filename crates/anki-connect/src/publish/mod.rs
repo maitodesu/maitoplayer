@@ -326,7 +326,7 @@ fn validate_content_addressed_media(media: &AnkiMedia) -> Result<&str, AppErrorV
     }
     let (hash, extension) = media
         .media_name
-        .strip_prefix("migaku-")
+        .strip_prefix("kiku-")
         .and_then(|value| value.rsplit_once('.'))
         .ok_or_else(|| schema_error("Attached media name was not content-addressed."))?;
     if hash.len() != 64
@@ -368,7 +368,7 @@ fn upload_media(api: &dyn AnkiApi, media: &[AnkiMedia]) -> Result<Vec<String>, A
 #[must_use]
 pub fn mining_id(draft: &contracts::CardDraftV1, profile_id: &str) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-mining-v2\0");
+    hasher.update(b"kiku-mining-v2\0");
     update_component(&mut hasher, draft.source_fingerprint.as_bytes());
     update_component(&mut hasher, draft.subtitle_source_version.as_bytes());
     hasher.update(draft.cue.start_us.to_le_bytes());
@@ -619,7 +619,7 @@ mod tests {
                         .and_then(|tags| {
                             tags.iter()
                                 .filter_map(Value::as_str)
-                                .find(|tag| tag.starts_with("migaku_id_"))
+                                .find(|tag| tag.starts_with("kiku_id_"))
                         })
                         .ok_or_else(|| schema_error("Note omitted its marker."))?
                         .to_owned();
@@ -722,11 +722,11 @@ mod tests {
         let image_data = [137, 80, 78, 71, 13, 10, 26, 10, 1].to_vec();
         vec![
             AnkiMedia {
-                media_name: format!("migaku-{}.mp3", hex::encode(Sha256::digest(&audio_data))),
+                media_name: format!("kiku-{}.mp3", hex::encode(Sha256::digest(&audio_data))),
                 data: audio_data,
             },
             AnkiMedia {
-                media_name: format!("migaku-{}.png", hex::encode(Sha256::digest(&image_data))),
+                media_name: format!("kiku-{}.png", hex::encode(Sha256::digest(&image_data))),
                 data: image_data,
             },
         ]
@@ -777,7 +777,7 @@ mod tests {
         assert_eq!(api.media_calls(), 2);
 
         let invalid = AnkiMedia {
-            media_name: format!("migaku-{}.mp3", "a".repeat(64)),
+            media_name: format!("kiku-{}.mp3", "a".repeat(64)),
             data: b"different".to_vec(),
         };
         assert!(validate_media(&[invalid]).is_err());

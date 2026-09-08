@@ -1,5 +1,5 @@
 [package]
-name = "migaku-video-companion"
+name = "maito-player"
 version = "0.1.0"
 description = "Local Japanese immersion video companion"
 edition = "2024"
@@ -7,7 +7,7 @@ rust-version = "1.96"
 license = "MIT OR Apache-2.0"
 
 [lib]
-name = "migaku_video_companion_lib"
+name = "maito_player_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

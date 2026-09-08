@@ -1,4 +1,4 @@
-# Migaku Video Companion
+# Maito Player
 
 A fast, local-first Windows video player for studying Japanese from your own media.
 

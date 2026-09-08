@@ -183,7 +183,7 @@ impl MediaEngine {
             _ => ("srt", "srt"),
         };
         let mut hasher = Sha256::new();
-        hasher.update(b"migaku-embedded-subtitle-v1\0");
+        hasher.update(b"maitoplayer-embedded-subtitle-v1\0");
         hasher.update(source_fingerprint.as_bytes());
         hasher.update(stream_id.as_str().as_bytes());
         let key = hex::encode(hasher.finalize());
@@ -677,8 +677,8 @@ mod real_tool_tests {
     use super::*;
 
     fn configured_engine() -> Option<(MediaEngine, tempfile::TempDir)> {
-        let ffmpeg = std::env::var_os("MIGAKU_TEST_FFMPEG").map(PathBuf::from)?;
-        let ffprobe = std::env::var_os("MIGAKU_TEST_FFPROBE").map(PathBuf::from)?;
+        let ffmpeg = std::env::var_os("MAITOPLAYER_TEST_FFMPEG").map(PathBuf::from)?;
+        let ffprobe = std::env::var_os("MAITOPLAYER_TEST_FFPROBE").map(PathBuf::from)?;
         let cache = tempdir().ok()?;
         Some((
             MediaEngine::new(ffmpeg, ffprobe, cache.path().join("playback")),
@@ -821,12 +821,13 @@ mod real_tool_tests {
     }
 
     #[test]
-    #[ignore = "requires MIGAKU_TEST_* paths and generated FFmpeg fixtures"]
+    #[ignore = "requires MAITOPLAYER_TEST_* paths and generated FFmpeg fixtures"]
     fn real_tool_remux_promotes_only_a_scoped_cache_artifact() -> Result<(), AppErrorV1> {
         let Some((engine, _cache)) = configured_engine() else {
             return Ok(());
         };
-        let Some(fixture) = std::env::var_os("MIGAKU_TEST_REMUX_FIXTURE").map(PathBuf::from) else {
+        let Some(fixture) = std::env::var_os("MAITOPLAYER_TEST_REMUX_FIXTURE").map(PathBuf::from)
+        else {
             return Ok(());
         };
         let imported = engine.import_path(fixture)?;
@@ -859,12 +860,13 @@ mod real_tool_tests {
     }
 
     #[test]
-    #[ignore = "requires MIGAKU_TEST_* paths and generated FFmpeg fixtures"]
+    #[ignore = "requires MAITOPLAYER_TEST_* paths and generated FFmpeg fixtures"]
     fn real_tool_extracts_only_selected_embedded_text_track() -> Result<(), AppErrorV1> {
         let Some((engine, _cache)) = configured_engine() else {
             return Ok(());
         };
-        let Some(fixture) = std::env::var_os("MIGAKU_TEST_EMBEDDED_FIXTURE").map(PathBuf::from)
+        let Some(fixture) =
+            std::env::var_os("MAITOPLAYER_TEST_EMBEDDED_FIXTURE").map(PathBuf::from)
         else {
             return Ok(());
         };
@@ -888,12 +890,13 @@ mod real_tool_tests {
     }
 
     #[test]
-    #[ignore = "requires MIGAKU_TEST_* paths and generated FFmpeg fixtures"]
+    #[ignore = "requires MAITOPLAYER_TEST_* paths and generated FFmpeg fixtures"]
     fn real_tool_converts_audio_without_transcoding_video() -> Result<(), AppErrorV1> {
         let Some((engine, _cache)) = configured_engine() else {
             return Ok(());
         };
-        let Some(fixture) = std::env::var_os("MIGAKU_TEST_AUDIO_FIXTURE").map(PathBuf::from) else {
+        let Some(fixture) = std::env::var_os("MAITOPLAYER_TEST_AUDIO_FIXTURE").map(PathBuf::from)
+        else {
             return Ok(());
         };
         let imported = engine.import_path(fixture)?;
@@ -920,12 +923,13 @@ mod real_tool_tests {
     }
 
     #[test]
-    #[ignore = "requires MIGAKU_TEST_* paths and generated FFmpeg fixtures"]
+    #[ignore = "requires MAITOPLAYER_TEST_* paths and generated FFmpeg fixtures"]
     fn real_tool_requires_approval_then_transcodes_video() -> Result<(), AppErrorV1> {
         let Some((engine, _cache)) = configured_engine() else {
             return Ok(());
         };
-        let Some(fixture) = std::env::var_os("MIGAKU_TEST_VIDEO_FIXTURE").map(PathBuf::from) else {
+        let Some(fixture) = std::env::var_os("MAITOPLAYER_TEST_VIDEO_FIXTURE").map(PathBuf::from)
+        else {
             return Ok(());
         };
         let imported = engine.import_path(fixture)?;
@@ -960,12 +964,12 @@ mod real_tool_tests {
     }
 
     #[test]
-    #[ignore = "requires MIGAKU_TEST_* paths and generated FFmpeg fixtures"]
+    #[ignore = "requires MAITOPLAYER_TEST_* paths and generated FFmpeg fixtures"]
     fn real_tool_extracts_bounded_audio_and_frame_assets() -> Result<(), AppErrorV1> {
         let Some((engine, _cache)) = configured_engine() else {
             return Ok(());
         };
-        let Some(fixture) = std::env::var_os("MIGAKU_TEST_DIRECT_FIXTURE").map(PathBuf::from)
+        let Some(fixture) = std::env::var_os("MAITOPLAYER_TEST_DIRECT_FIXTURE").map(PathBuf::from)
         else {
             return Ok(());
         };

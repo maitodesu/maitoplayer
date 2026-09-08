@@ -12,7 +12,7 @@ connection, font install, or dependency setup.
 
 Normal release builds use only packaged dependencies. Diagnostic/development
 builds can enable explicit overrides with
-`MIGAKU_ENABLE_DEPENDENCY_OVERRIDES=1`; only then do the FFmpeg, FFprobe, and
+`MAITOPLAYER_ENABLE_DEPENDENCY_OVERRIDES=1`; only then do the FFmpeg, FFprobe, and
 dictionary path overrides or `PATH` discovery apply. Those controls are not an
 end-user installation step.
 

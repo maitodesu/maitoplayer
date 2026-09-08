@@ -40,10 +40,10 @@
         applyTheme(event.newValue, document.documentElement);
       }
     };
-    window.addEventListener('migaku-theme-change', handleThemeChange);
+    window.addEventListener('maitoplayer-theme-change', handleThemeChange);
     window.addEventListener('storage', handleStorage);
     return () => {
-      window.removeEventListener('migaku-theme-change', handleThemeChange);
+      window.removeEventListener('maitoplayer-theme-change', handleThemeChange);
       window.removeEventListener('storage', handleStorage);
     };
   });
@@ -56,7 +56,7 @@
       <label class="theme-option" class:selected={selected === theme.id}>
         <input
           type="radio"
-          name="migaku-theme"
+          name="maitoplayer-theme"
           value={theme.id}
           checked={selected === theme.id}
           onchange={() => selectTheme(theme.id)}

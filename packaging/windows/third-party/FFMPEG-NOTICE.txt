@@ -1,7 +1,7 @@
 FFmpeg bundled command-line programs
 ====================================
 
-Migaku Video Companion invokes the separately bundled ffmpeg.exe and ffprobe.exe
+Maito Player invokes the separately bundled ffmpeg.exe and ffprobe.exe
 programs. It does not link FFmpeg libraries into the application.
 
 Upstream project: FFmpeg (https://ffmpeg.org/)

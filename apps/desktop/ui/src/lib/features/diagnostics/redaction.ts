@@ -75,7 +75,7 @@ export function exportDiagnostics(preview: DiagnosticsPreview): void {
   const url = URL.createObjectURL(new Blob([contents], { type: 'application/json' }));
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = 'migaku-diagnostics-redacted.json';
+  anchor.download = 'maitoplayer-diagnostics-redacted.json';
   anchor.hidden = true;
   document.body.append(anchor);
   anchor.click();

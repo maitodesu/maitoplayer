@@ -289,7 +289,7 @@ fn tool_profile(path: &Path, runner: &dyn MediaToolPort) -> String {
 #[must_use]
 pub fn conversion_cache_key(request: &ConversionRequest, tool_profile: &str) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-conversion-v1\0");
+    hasher.update(b"maitoplayer-conversion-v1\0");
     hasher.update(request.source_fingerprint.as_bytes());
     for stream in &request.selected_streams {
         hasher.update([0]);
@@ -509,7 +509,7 @@ fn run_extraction(
 
 fn extraction_key(spec: &ExtractionSpec) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-extraction-v1\0");
+    hasher.update(b"maitoplayer-extraction-v1\0");
     hasher.update(spec.session_id.as_str().as_bytes());
     hasher.update(spec.start_us.to_le_bytes());
     hasher.update(spec.end_us.to_le_bytes());

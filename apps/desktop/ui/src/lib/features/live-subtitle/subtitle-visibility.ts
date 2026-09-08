@@ -6,7 +6,7 @@ export interface SubtitleVisibility {
   english: boolean;
 }
 
-export const SUBTITLE_VISIBILITY_STORAGE_KEY = 'migaku.subtitle-visibility.v1';
+export const SUBTITLE_VISIBILITY_STORAGE_KEY = 'maitoplayer.subtitle-visibility.v1';
 
 export const DEFAULT_SUBTITLE_VISIBILITY: SubtitleVisibility = {
   furigana: true,

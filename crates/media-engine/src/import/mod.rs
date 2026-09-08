@@ -65,7 +65,7 @@ pub fn import_authorized_path(path: &Path) -> Result<ImportedSource, AppErrorV1>
 fn sampled_fingerprint(path: &Path, metadata: &fs::Metadata) -> Result<String, AppErrorV1> {
     let mut file = File::open(path).map_err(scope_error)?;
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-source-v1\0");
+    hasher.update(b"maitoplayer-source-v1\0");
     hasher.update(metadata.len().to_le_bytes());
     if let Ok(modified) = metadata.modified()
         && let Ok(elapsed) = modified.duration_since(UNIX_EPOCH)
@@ -92,7 +92,7 @@ fn new_session_id(fingerprint: &str) -> MediaSessionId {
         .duration_since(UNIX_EPOCH)
         .map_or(0, |duration| duration.as_nanos());
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-session-v1\0");
+    hasher.update(b"maitoplayer-session-v1\0");
     hasher.update(fingerprint.as_bytes());
     hasher.update(sequence.to_le_bytes());
     hasher.update(now.to_le_bytes());

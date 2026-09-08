@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Migaku Video Companion",
+  "productName": "Maito Player",
   "version": "0.1.0",
-  "identifier": "com.migaku.video-companion",
+  "identifier": "com.maitodesu.maitoplayer",
   "build": {
     "beforeDevCommand": "pnpm --dir ui dev",
     "devUrl": "http://localhost:1420",
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Migaku Video Companion",
+        "title": "Maito Player",
         "width": 1360,
         "height": 860,
         "minWidth": 980,
@@ -23,7 +23,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: http://asset.localhost data: blob:; media-src 'self' http://migaku-media.localhost migaku-media: blob:; connect-src 'self' ipc: http://ipc.localhost; font-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'",
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: http://asset.localhost data: blob:; media-src 'self' http://maitoplayer-media.localhost maitoplayer-media: blob:; connect-src 'self' ipc: http://ipc.localhost; font-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'",
       "freezePrototype": true
     }
   },

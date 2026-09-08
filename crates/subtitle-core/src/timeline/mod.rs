@@ -204,7 +204,7 @@ fn window_id(
     revision: u64,
 ) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-window-v1\0");
+    hasher.update(b"maitoplayer-window-v1\0");
     hasher.update(session_id.as_str().as_bytes());
     hasher.update(source_id.as_str().as_bytes());
     hasher.update(start.to_le_bytes());

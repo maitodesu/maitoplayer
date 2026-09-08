@@ -664,7 +664,7 @@
   <header class="topbar">
     <button class="brand" type="button" onclick={() => (tab = 'watch')} aria-label="Open player">
       <span class="brand-mark">見</span>
-      <span><strong>Migaku</strong><small>Cinema · 映画と言葉</small></span>
+      <span><strong>Maito</strong><small>Player · 映画と言葉</small></span>
     </button>
     <nav aria-label="Primary navigation">
       <button

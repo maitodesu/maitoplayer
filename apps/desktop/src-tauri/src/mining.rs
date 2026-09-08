@@ -1073,7 +1073,7 @@ mod tests {
             deck_name: "Mining".into(),
             model_name: "Basic".into(),
             field_mapping: BTreeMap::from([("expression".into(), "Front".into())]),
-            tags: vec!["migaku".into()],
+            tags: vec!["kiku".into()],
         }
     }
 
@@ -1102,7 +1102,7 @@ mod tests {
                 deck_name: "Mining".into(),
                 model_name: "Basic".into(),
                 field_mapping: BTreeMap::new(),
-                tags: vec!["migaku".into()],
+                tags: vec!["kiku".into()],
             },
             clip_policy: ClipPolicySnapshot::from(&ClipPolicy::default()),
         };
@@ -1203,7 +1203,7 @@ mod tests {
     #[test]
     fn two_publishers_with_separate_connections_add_exactly_one_note() -> Result<(), AppErrorV1> {
         let database = std::env::temp_dir().join(format!(
-            "migaku-publish-claim-{}.sqlite3",
+            "maitoplayer-publish-claim-{}.sqlite3",
             new_owner_token()
         ));
         let first_storage = Arc::new(Storage::open(&database)?);
@@ -1416,7 +1416,7 @@ mod tests {
     #[test]
     fn cancelled_asset_cleanup_replays_after_reopen_then_allows_restart() -> Result<(), AppErrorV1>
     {
-        let test_root = std::env::temp_dir().join(format!("migaku-cancel-{}", new_owner_token()));
+        let test_root = std::env::temp_dir().join(format!("maitoplayer-cancel-{}", new_owner_token()));
         std::fs::create_dir_all(&test_root).map_err(media_error)?;
         let audio_source = test_root.join("source.mp3");
         let image_source = test_root.join("source.png");
@@ -1499,7 +1499,7 @@ mod tests {
     #[test]
     fn cancelled_asset_release_failure_stays_visible_and_retries() -> Result<(), AppErrorV1> {
         let test_root =
-            std::env::temp_dir().join(format!("migaku-cancel-failure-{}", new_owner_token()));
+            std::env::temp_dir().join(format!("maitoplayer-cancel-failure-{}", new_owner_token()));
         std::fs::create_dir_all(&test_root).map_err(media_error)?;
         let source = test_root.join("source.mp3");
         std::fs::write(&source, b"ID3 audio").map_err(media_error)?;

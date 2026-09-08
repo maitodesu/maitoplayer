@@ -236,7 +236,7 @@ impl AnkiApi for AnkiEmulator {
                     .and_then(|tags| {
                         tags.iter()
                             .filter_map(Value::as_str)
-                            .find(|tag| tag.starts_with("migaku_id_"))
+                            .find(|tag| tag.starts_with("kiku_id_"))
                     })
                     .ok_or_else(|| {
                         AppErrorV1::new(
@@ -364,7 +364,7 @@ mod tests {
     fn note_params() -> Value {
         json!({
             "note": {
-                "tags": [format!("migaku_id_{}", "a".repeat(64))]
+                "tags": [format!("kiku_id_{}", "a".repeat(64))]
             }
         })
     }
@@ -382,7 +382,7 @@ mod tests {
         assert_eq!(post_commit.note_count(), 1);
         let found = post_commit.invoke(
             "findNotes",
-            json!({ "query": format!("tag:migaku_id_{}", "a".repeat(64)) }),
+            json!({ "query": format!("tag:kiku_id_{}", "a".repeat(64)) }),
         )?;
         assert_eq!(found, json!([1]));
         Ok(())

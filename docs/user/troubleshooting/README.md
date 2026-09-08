@@ -13,7 +13,7 @@
 - **Anki offline:** start Anki Desktop, install/enable AnkiConnect, and allow local
   access on `127.0.0.1:8765`.
 - **Field mismatch:** select an existing deck/note type and remap the exact fields.
-- **Outcome uncertain:** reconcile the `migaku_id_…` tag before retrying; this
+- **Outcome uncertain:** reconcile the `kiku_id_…` tag before retrying; this
   avoids duplicate notes after a post-commit disconnect.
 - **Interrupted card needs its source:** reopen the unchanged source, choose
   **Remember file**, and retry recovery. Jobs that already reached assets-ready

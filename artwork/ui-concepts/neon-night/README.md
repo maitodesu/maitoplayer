@@ -1,6 +1,6 @@
 # Neon Night
 
-A static layout exploration for Migaku Video Companion. It uses a restrained Tokyo-at-night palette, cinematic player-first hierarchy, bilingual subtitles, a hover-style dictionary result, and a deliberately secondary word-card workflow.
+A static layout exploration for Maito Player. It uses a restrained Tokyo-at-night palette, cinematic player-first hierarchy, bilingual subtitles, a hover-style dictionary result, and a deliberately secondary word-card workflow.
 
 Open `index.html` directly in a browser. It has no network, build, or runtime dependencies. Subtitle typography requests the locally installed `Noto Sans JP` first, with Japanese system-font fallbacks for machines where it is unavailable.
 

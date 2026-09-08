@@ -321,7 +321,7 @@ fn remove_staging_assets(extracted: &ports::ExtractedAssets) {
 
 fn request_key(spec: &ExtractionSpec) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-extraction-v1\0");
+    hasher.update(b"maitoplayer-extraction-v1\0");
     update_component(&mut hasher, spec.session_id.as_str().as_bytes());
     hasher.update(spec.start_us.to_le_bytes());
     hasher.update(spec.end_us.to_le_bytes());

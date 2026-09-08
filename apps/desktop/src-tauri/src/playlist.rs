@@ -262,7 +262,7 @@ impl PlaylistManager {
             ),
         };
         let playlist = StoredPlaylist {
-            playlist_id: stable_id(b"migaku-playlist-v1\0", &directory),
+            playlist_id: stable_id(b"maitoplayer-playlist-v1\0", &directory),
             directory,
             display_name,
             revision: 1,
@@ -607,7 +607,7 @@ fn scan_directory(directory: &Path) -> Result<DirectoryScan, AppErrorV1> {
             let path = canonical_child(&canonical, &path)?;
             let metadata = path.metadata().map_err(folder_read_error)?;
             videos.push(ScannedVideo {
-                item_id: stable_id(b"migaku-playlist-item-v1\0", &path),
+                item_id: stable_id(b"maitoplayer-playlist-item-v1\0", &path),
                 display_name: safe_display_name(&path, "Local video"),
                 path,
                 size_bytes: metadata.len(),
@@ -1153,7 +1153,7 @@ fn extension_is(path: &Path, extensions: &[&str]) -> bool {
 
 fn directory_change_id(videos: &[ScannedVideo], subtitles: &[PathBuf]) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-playlist-directory-change-v1\0");
+    hasher.update(b"maitoplayer-playlist-directory-change-v1\0");
     for video in videos {
         update_path_hash(&mut hasher, &video.path);
         hasher.update(video.size_bytes.to_le_bytes());

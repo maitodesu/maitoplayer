@@ -1,4 +1,4 @@
-export const THEME_STORAGE_KEY = 'migaku.ui-theme.v1';
+export const THEME_STORAGE_KEY = 'maitoplayer.ui-theme.v1';
 
 export const themeOptions = [
   {
@@ -96,7 +96,7 @@ export function chooseTheme(theme: ThemeId): void {
   } catch {
     // The visual selection remains active for this session.
   }
-  window.dispatchEvent(new CustomEvent<ThemeId>('migaku-theme-change', { detail: theme }));
+  window.dispatchEvent(new CustomEvent<ThemeId>('maitoplayer-theme-change', { detail: theme }));
 }
 
 // ThemePicker is imported with the application module graph, so this runs

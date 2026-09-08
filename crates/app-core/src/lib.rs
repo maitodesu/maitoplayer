@@ -556,8 +556,8 @@ fn subtitle_source_id(
 ) -> SubtitleSourceId {
     let mut hasher = Sha256::new();
     hasher.update(match role {
-        SubtitleRole::Interactive => b"migaku-subtitle-source-v1\0".as_slice(),
-        SubtitleRole::Translation => b"migaku-translation-subtitle-source-v1\0".as_slice(),
+        SubtitleRole::Interactive => b"maitoplayer-subtitle-source-v1\0".as_slice(),
+        SubtitleRole::Translation => b"maitoplayer-translation-subtitle-source-v1\0".as_slice(),
     });
     hasher.update(session_id.as_str().as_bytes());
     hasher.update(version.as_bytes());
@@ -579,7 +579,7 @@ fn should_retain_subtitle(
 
 fn draft_id(selection: &DraftSelection, source_version: &str) -> DraftId {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-draft-v1\0");
+    hasher.update(b"maitoplayer-draft-v1\0");
     hasher.update(selection.session_id.as_str().as_bytes());
     hasher.update(selection.cue_id.as_str().as_bytes());
     hasher.update(selection.token_id.as_str().as_bytes());

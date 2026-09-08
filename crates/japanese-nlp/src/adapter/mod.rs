@@ -232,7 +232,7 @@ impl TokenizerState {
 
 fn token_id(sentence: &str, position: usize, start: usize, end: usize) -> TokenId {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-token-v1\0");
+    hasher.update(b"maitoplayer-token-v1\0");
     hasher.update(TOKENIZER_VERSION.as_bytes());
     hasher.update(sentence.as_bytes());
     hasher.update(u64::try_from(position).unwrap_or(u64::MAX).to_le_bytes());

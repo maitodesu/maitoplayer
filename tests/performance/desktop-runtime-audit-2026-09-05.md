@@ -131,7 +131,7 @@ two-hour memory gate; see `../e2e/immersive-reader-browser-result-2026-09-05.md`
 
 ## Release artifact produced
 
-- Installer: `Migaku Video Companion_0.1.0_x64-setup.exe`
+- Installer: `Maito Player_0.1.0_x64-setup.exe`
 - Size: 369,305,747 bytes (352.20 MiB)
 - SHA-256: `08c68880f2c557b0ed434c61a158ac7592634502bbcba16132d090a18dbef804`
 - Authenticode: `NotSigned` (code signing remains a distribution gate)

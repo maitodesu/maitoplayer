@@ -51,7 +51,7 @@ const SETTINGS_KEY: &str = "user.preferences";
 const FFMPEG_PATH_KEY: &str = "tools.ffmpeg_path";
 const FFPROBE_PATH_KEY: &str = "tools.ffprobe_path";
 const DICTIONARY_PATH_KEY: &str = "dictionary.path";
-const DEPENDENCY_OVERRIDE_ENV: &str = "MIGAKU_ENABLE_DEPENDENCY_OVERRIDES";
+const DEPENDENCY_OVERRIDE_ENV: &str = "MAITOPLAYER_ENABLE_DEPENDENCY_OVERRIDES";
 const BUNDLED_FFMPEG_PATH: &str = "bin/ffmpeg.exe";
 const BUNDLED_FFPROBE_PATH: &str = "bin/ffprobe.exe";
 const BUNDLED_DICTIONARY_PATH: &str = "data/jmdict.sqlite";
@@ -83,7 +83,7 @@ pub fn run() {
                 state.media.cancel_all();
             }
         })
-        .register_uri_scheme_protocol("migaku-media", |context, request| {
+        .register_uri_scheme_protocol("maitoplayer-media", |context, request| {
             let Some(state) = context.app_handle().try_state::<RuntimeState>() else {
                 return protocol_error(StatusCode::SERVICE_UNAVAILABLE);
             };
@@ -164,9 +164,9 @@ pub fn run() {
             let resource_dir = app.path().resource_dir()?;
             let dependency_overrides_enabled = dependency_overrides_enabled();
             let configured_ffmpeg =
-                selected_tool_path(storage.as_ref(), FFMPEG_PATH_KEY, "MIGAKU_FFMPEG_PATH")?;
+                selected_tool_path(storage.as_ref(), FFMPEG_PATH_KEY, "MAITOPLAYER_FFMPEG_PATH")?;
             let configured_ffprobe =
-                selected_tool_path(storage.as_ref(), FFPROBE_PATH_KEY, "MIGAKU_FFPROBE_PATH")?;
+                selected_tool_path(storage.as_ref(), FFPROBE_PATH_KEY, "MAITOPLAYER_FFPROBE_PATH")?;
             let ffmpeg = resolve_media_tool(
                 &resource_dir.join(BUNDLED_FFMPEG_PATH),
                 configured_ffmpeg.as_deref(),
@@ -190,7 +190,7 @@ pub fn run() {
             let configured_dictionary = selected_tool_path(
                 storage.as_ref(),
                 DICTIONARY_PATH_KEY,
-                "MIGAKU_DICTIONARY_PATH",
+                "MAITOPLAYER_DICTIONARY_PATH",
             )?;
             let dictionary_path = resolve_data_file(
                 &resource_dir.join(BUNDLED_DICTIONARY_PATH),
@@ -377,7 +377,7 @@ fn default_user_settings() -> UserSettingsV1 {
         card_profile: CardProfileSettingsV1 {
             profile_id: "default".into(),
             deck_name: "Default".into(),
-            model_name: "Migaku".into(),
+            model_name: "Kiku".into(),
             field_mapping: BTreeMap::from([
                 ("expression".into(), "Expression".into()),
                 ("reading".into(), "Reading".into()),
@@ -389,7 +389,7 @@ fn default_user_settings() -> UserSettingsV1 {
                 ("timestamp".into(), "Timestamp".into()),
                 ("mining_id".into(), "MiningId".into()),
             ]),
-            tags: vec!["migaku".into(), "immersion".into()],
+            tags: vec!["kiku".into(), "immersion".into()],
         },
     }
 }

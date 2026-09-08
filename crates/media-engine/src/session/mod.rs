@@ -618,9 +618,9 @@ fn selected_stream(
 
 fn playback_url(session_id: &MediaSessionId, cache_key: Option<&str>) -> String {
     let base = if cfg!(windows) {
-        format!("http://migaku-media.localhost/session/{session_id}")
+        format!("http://maitoplayer-media.localhost/session/{session_id}")
     } else {
-        format!("migaku-media://localhost/session/{session_id}")
+        format!("maitoplayer-media://localhost/session/{session_id}")
     };
     cache_key.map_or(base.clone(), |key| format!("{base}?v={key}"))
 }

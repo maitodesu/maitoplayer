@@ -1,5 +1,5 @@
-/target/
-/node_modules/
+**/target/
+**/node_modules/
 /output/
 /.tauri/
 /.playwright-cli/
@@ -16,6 +16,5 @@
 .env.*
 !.env.example
 pnpm-debug.log*
-src-tauri/target/
 fixtures/media/generated/
 docs/spikes/media-compatibility/results/local/

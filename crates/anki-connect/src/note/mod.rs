@@ -194,7 +194,7 @@ fn unique_trimmed<'a>(values: impl Iterator<Item = &'a String>) -> Vec<String> {
 #[must_use]
 pub fn marker_tag(mining_id: &str) -> String {
     format!(
-        "migaku_id_{}",
+        "kiku_id_{}",
         mining_id
             .chars()
             .filter(|character| character.is_ascii_hexdigit())
@@ -284,7 +284,7 @@ fn generated_image_markup(media_name: Option<&str>) -> Result<String, AppErrorV1
 
 fn validate_media_name(media_name: &str, allowed_extensions: &[&str]) -> Result<(), AppErrorV1> {
     let valid = media_name
-        .strip_prefix("migaku-")
+        .strip_prefix("kiku-")
         .and_then(|remainder| remainder.rsplit_once('.'))
         .is_some_and(|(hash, extension)| {
             hash.len() == 64
@@ -389,8 +389,8 @@ mod tests {
     #[test]
     fn escapes_text_but_preserves_only_valid_generated_media_markup() -> Result<(), AppErrorV1> {
         let media = NoteMedia {
-            audio_media_name: Some(format!("migaku-{}.mp3", "a".repeat(64))),
-            image_media_name: Some(format!("migaku-{}.jpg", "b".repeat(64))),
+            audio_media_name: Some(format!("kiku-{}.mp3", "a".repeat(64))),
+            image_media_name: Some(format!("kiku-{}.jpg", "b".repeat(64))),
         };
         let note = build_note_with_media(
             &profile(),
@@ -401,8 +401,8 @@ mod tests {
         )?;
         assert_eq!(note.fields["Front"], "&lt;見る&gt;");
         assert!(note.fields["Sentence"].contains("&lt;b&gt;"));
-        assert!(note.fields["Audio"].starts_with("[sound:migaku-"));
-        assert!(note.fields["Image"].starts_with("<img src=\"migaku-"));
+        assert!(note.fields["Audio"].starts_with("[sound:kiku-"));
+        assert!(note.fields["Image"].starts_with("<img src=\"kiku-"));
         Ok(())
     }
 

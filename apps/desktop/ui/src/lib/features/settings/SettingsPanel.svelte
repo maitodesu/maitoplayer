@@ -17,10 +17,10 @@
   let leadMs = $state(250);
   let trailMs = $state(500);
   let deckName = $state('Default');
-  let modelName = $state('Migaku');
+  let modelName = $state('Kiku');
   let ankiPort = $state(8765);
   let ankiTimeoutMs = $state(5000);
-  let tags = $state('migaku, immersion');
+  let tags = $state('kiku, immersion');
   let mapping = $state<Record<string, string>>({});
   let busy = $state(false);
   let status = $state('');

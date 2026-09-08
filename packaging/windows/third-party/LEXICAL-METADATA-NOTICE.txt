@@ -7,7 +7,7 @@ Pitch-accent data
 The bundled lexical-metadata.sqlite database contains a compact transformation
 of pitch-accent fields from UniDic for Contemporary Spoken Japanese 3.1.1,
 published by the National Institute for Japanese Language and Linguistics.
-Migaku uses the New BSD licence option offered by the UniDic project. The
+Maito Player uses the New BSD licence option offered by the UniDic project. The
 original AUTHORS and BSD files are installed beside this notice.
 
 Source:

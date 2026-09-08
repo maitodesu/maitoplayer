@@ -22,11 +22,11 @@ foreach ($tool in @($ffmpegPath, $ffprobePath)) {
 }
 
 $required = @{
-  MIGAKU_TEST_REMUX_FIXTURE = 'h264-aac.mkv'
-  MIGAKU_TEST_EMBEDDED_FIXTURE = 'multi-track.mkv'
-  MIGAKU_TEST_AUDIO_FIXTURE = 'h264-flac.mkv'
-  MIGAKU_TEST_VIDEO_FIXTURE = 'vp9-opus.webm'
-  MIGAKU_TEST_DIRECT_FIXTURE = 'known-markers.mp4'
+  MAITOPLAYER_TEST_REMUX_FIXTURE = 'h264-aac.mkv'
+  MAITOPLAYER_TEST_EMBEDDED_FIXTURE = 'multi-track.mkv'
+  MAITOPLAYER_TEST_AUDIO_FIXTURE = 'h264-flac.mkv'
+  MAITOPLAYER_TEST_VIDEO_FIXTURE = 'vp9-opus.webm'
+  MAITOPLAYER_TEST_DIRECT_FIXTURE = 'known-markers.mp4'
 }
 foreach ($entry in $required.GetEnumerator()) {
   $path = Join-Path $fixtureRoot $entry.Value
@@ -72,13 +72,13 @@ if ($expectedNames.Count -ne $actual.Count) {
 }
 
 $saved = @{}
-$names = @('MIGAKU_TEST_FFMPEG', 'MIGAKU_TEST_FFPROBE') + @($required.Keys)
+$names = @('MAITOPLAYER_TEST_FFMPEG', 'MAITOPLAYER_TEST_FFPROBE') + @($required.Keys)
 foreach ($name in $names) {
   $saved[$name] = [Environment]::GetEnvironmentVariable($name, 'Process')
 }
 try {
-  $env:MIGAKU_TEST_FFMPEG = $ffmpegPath
-  $env:MIGAKU_TEST_FFPROBE = $ffprobePath
+  $env:MAITOPLAYER_TEST_FFMPEG = $ffmpegPath
+  $env:MAITOPLAYER_TEST_FFPROBE = $ffprobePath
   foreach ($entry in $required.GetEnumerator()) {
     [Environment]::SetEnvironmentVariable(
       $entry.Key,

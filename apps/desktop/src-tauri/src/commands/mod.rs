@@ -1246,7 +1246,7 @@ fn store_translation_subtitle_binding(
 
 fn subtitle_candidate_id(fingerprint: &str, path: &std::path::Path) -> String {
     let mut hasher = Sha256::new();
-    hasher.update(b"migaku-adjacent-subtitle-v1\0");
+    hasher.update(b"maitoplayer-adjacent-subtitle-v1\0");
     hasher.update(fingerprint.as_bytes());
     hasher.update([0]);
     hasher.update(path.as_os_str().to_string_lossy().as_bytes());

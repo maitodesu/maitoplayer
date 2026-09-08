@@ -6,7 +6,7 @@ Status: accepted
 
 The Tauri webview owns playback through one `HTMLVideoElement`. Rust imports the
 user-authorized file into an opaque media session and serves bounded byte ranges
-through the `migaku-media` protocol. The UI never receives a reusable filesystem
+through the `maitoplayer-media` protocol. The UI never receives a reusable filesystem
 path.
 
 The backend chooses the cheapest verified path in this order: direct playback,
